@@ -1,0 +1,72 @@
+/* Plugin admin styles (core kit: src/core3/admin-kit.css). */
+#dev3rs-admin-root { max-width: 1240px; }
+.dev3rs-root .dev3rs-title { margin-bottom: 12px; }
+.dev3rs-root .dev3rs-m-0 { margin: 0; }
+.dev3rs-root .dev3rs-badge.is-locked { background: #e0e7ff; color: #3730a3; }
+.dev3rs-root .dev3rs-badge.is-none { background: #f0f0f1; color: #50575e; }
+.dev3rs-root .dev3rs-muted { color: #646970; font-size: 12px; margin-top: 2px; }
+.dev3rs-root .dev3rs-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-bottom: 16px; }
+.dev3rs-root .dev3rs-bulk__row { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between; }
+.dev3rs-root .dev3rs-bulk__actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.dev3rs-root .dev3rs-progress { margin-top: 16px; }
+.dev3rs-root .dev3rs-progress__bar { height: 10px; background: #f0f0f1; border-radius: 999px; overflow: hidden; }
+.dev3rs-root .dev3rs-progress__bar > span { display: block; height: 100%; background: #4f46e5; border-radius: 999px; transition: width .4s ease; }
+.dev3rs-root .dev3rs-progress__meta { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 6px; color: #50575e; }
+.dev3rs-root .dev3rs-progress__errors { margin-top: 8px; }
+.dev3rs-root .dev3rs-progress__errors ul { margin: 6px 0 0 18px; list-style: disc; }
+.dev3rs-root .dev3rs-toolbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; margin: 4px 0 12px; }
+.dev3rs-root .dev3rs-toolbar__right { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.dev3rs-root .dev3rs-toolbar__right .components-search-control { min-width: 240px; }
+.dev3rs-root .dev3rs-filters { display: flex; flex-wrap: wrap; gap: 4px; }
+.dev3rs-root .dev3rs-filters button { background: none; border: 0; padding: 4px 8px; color: #2271b1; cursor: pointer; font-size: 13px; border-radius: 4px; }
+.dev3rs-root .dev3rs-filters button.is-active { color: #1d2327; font-weight: 600; background: #f0f0f1; }
+.dev3rs-root .dev3rs-filters .count { color: #646970; font-weight: 400; }
+.dev3rs-root .dev3rs-table { border-radius: 8px; overflow: hidden; }
+.dev3rs-root .dev3rs-table .check-column { width: 2.2em; padding: 10px 0 0 10px; vertical-align: middle; }
+.dev3rs-root .dev3rs-table .check-column .components-checkbox-control__input-container { margin: 0; }
+.dev3rs-root .dev3rs-product { display: flex; align-items: center; gap: 10px; }
+.dev3rs-root .dev3rs-product img, .dev3rs-root .dev3rs-thumb { width: 36px; height: 36px; border-radius: 6px; object-fit: cover; background: #f0f0f1; flex: none; display: inline-block; }
+.dev3rs-root .dev3rs-product__name { font-weight: 600; }
+.dev3rs-root .dev3rs-product .row-actions { padding-top: 2px; }
+.dev3rs-root .dev3rs-stars { color: #b45309; margin-left: 6px; white-space: nowrap; }
+.dev3rs-root .dev3rs-col-actions { white-space: nowrap; text-align: right; }
+.dev3rs-root .dev3rs-col-actions .components-button + .components-button { margin-left: 6px; }
+.dev3rs-root .dev3rs-empty { text-align: center; padding: 28px; color: #646970; }
+.dev3rs-root .dev3rs-pager { display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-top: 12px; }
+.dev3rs-root .dev3rs-display { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 20px; align-items: start; }
+.dev3rs-root .dev3rs-sticky { position: sticky; top: 46px; }
+.dev3rs-root .dev3rs-toggles { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 16px; margin: 12px 0 16px; }
+.dev3rs-root .dev3rs-colors { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; margin-bottom: 16px; }
+.dev3rs-root .dev3rs-color { display: grid; grid-template-columns: 36px 1fr; grid-template-rows: auto auto; column-gap: 8px; align-items: center; cursor: pointer; }
+.dev3rs-root .dev3rs-color input[type=color] { grid-row: span 2; width: 36px; height: 36px; padding: 0; border: 1px solid #dcdcde; border-radius: 6px; background: none; cursor: pointer; }
+.dev3rs-root .dev3rs-color code { font-size: 11px; background: none; padding: 0; color: #646970; }
+.dev3rs-root .dev3rs-savebar { display: flex; gap: 8px; align-items: center; margin-bottom: 20px; }
+.dev3rs-root .dev3rs-preview-frame { background: #fafafa; border: 1px dashed #dcdcde; border-radius: 8px; padding: 16px; min-height: 120px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+.dev3rs-root .dev3rs-preview-frame .dev3rs-rs { margin-bottom: 0; }
+.dev3rs-root .dev3rs-general .components-base-control, .dev3rs-root .dev3rs-general .components-toggle-control { margin-bottom: 18px; }
+.dev3rs-root .dev3rs-general { max-width: 860px; }
+.dev3rs-root .dev3rs-card h2 + .components-base-control, .dev3rs-root .dev3rs-card h2 + .components-toggle-control { margin-top: 14px; }
+.dev3rs-root .dev3rs-display__form .dev3rs-card > .components-base-control { margin-bottom: 14px; }
+.dev3rs-root .dev3rs-toggles .components-base-control, .dev3rs-root .dev3rs-toggles .components-toggle-control { margin: 0 !important; }
+.dev3rs-root .dev3rs-mt-2 { margin-top: 8px; }
+.dev3rs-root .dev3rs-mt-3 { margin-top: 12px; }
+/* Modal (rendered in a portal; carries .dev3rs-root itself). */
+.dev3rs-modal.components-modal__frame { width: min(920px, 94vw); max-width: none; }
+.dev3rs-modal .dev3rs-modal__meta { margin: 0 0 12px; color: #50575e; }
+.dev3rs-modal .dev3rs-modal__body { padding-top: 16px; }
+.dev3rs-modal .dev3rs-edit > * + * { margin-top: 16px; }
+.dev3rs-modal .dev3rs-edit__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 16px; border: 0; padding: 0; margin-left: 0; margin-right: 0; }
+.dev3rs-root .dev3rs-edit__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 16px; }
+.dev3rs-modal .dev3rs-edit__grid--3 { grid-template-columns: repeat(3, 1fr); }
+.dev3rs-modal fieldset legend { font-weight: 600; margin-bottom: 6px; padding: 0; }
+.dev3rs-modal .dev3rs-keywords-editor { border: 0; padding: 0; margin: 0; }
+.dev3rs-modal .dev3rs-kw-row { display: grid; grid-template-columns: 1fr 160px 36px; gap: 8px; align-items: center; margin-bottom: 6px; }
+.dev3rs-modal .dev3rs-modal__actions { display: flex; gap: 8px; }
+.dev3rs-modal .dev3rs-modal__footer { display: flex; gap: 8px; justify-content: flex-end; border-top: 1px solid #f0f0f1; margin-top: 20px; padding-top: 14px; }
+.dev3rs-modal .dev3rs-flagged ul { margin: 4px 0 0 18px; list-style: disc; }
+.dev3rs-modal .dev3rs-flagged p { margin: 0; }
+@media (max-width: 960px) {
+	.dev3rs-root .dev3rs-display { grid-template-columns: 1fr; }
+	.dev3rs-root .dev3rs-sticky { position: static; }
+	.dev3rs-modal .dev3rs-edit__grid, .dev3rs-modal .dev3rs-edit__grid--3, .dev3rs-root .dev3rs-toggles { grid-template-columns: 1fr; }
+}

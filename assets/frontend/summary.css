@@ -1,0 +1,67 @@
+/* DEV3 AI Review Summarizer widget. Colours come from CSS variables set on .dev3rs-rs (Display settings). */
+.dev3rs-rs {
+	--dev3rs-accent: #4f46e5; --dev3rs-bg: #fff; --dev3rs-text: #1f2937; --dev3rs-pos: #16a34a; --dev3rs-neu: #9ca3af; --dev3rs-neg: #dc2626; --dev3rs-border: #e5e7eb; --dev3rs-radius: 12px;
+	box-sizing: border-box; margin: 0 0 1.75em; padding: 1.25em 1.4em; max-width: 100%;
+	background: var(--dev3rs-bg); color: var(--dev3rs-text); border: 1px solid var(--dev3rs-border); border-radius: var(--dev3rs-radius);
+	font-size: 15px; line-height: 1.55; text-align: left;
+}
+.dev3rs-rs *, .dev3rs-rs *::before, .dev3rs-rs *::after { box-sizing: border-box; }
+.dev3rs-rs ul, .dev3rs-rs dl, .dev3rs-rs dd { margin: 0; padding: 0; list-style: none; }
+/* Themes and WooCommerce style lists/headings inside tab panels with high specificity; keep ours. */
+.dev3rs-rs ul, .dev3rs-rs li, .dev3rs-rs dl { border: 0 !important; }
+.dev3rs-rs ul::before, .dev3rs-rs ul::after { content: none !important; }
+.dev3rs-rs li { margin: 0; }
+.dev3rs-rs p, .dev3rs-rs li, .dev3rs-rs dt, .dev3rs-rs dd { font-size: inherit; line-height: inherit; }
+.dev3rs-rs__head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .25em 1em; margin-bottom: .6em; }
+.dev3rs-rs .dev3rs-rs__head .dev3rs-rs__title.dev3rs-rs__title { display: flex; align-items: center; gap: .4em; margin: 0 !important; padding: 0; font-size: 1.15em !important; line-height: 1.3 !important; font-weight: 700; color: inherit; letter-spacing: 0; text-transform: none; border: 0; }
+.dev3rs-rs__spark { color: var(--dev3rs-accent); flex: none; }
+.dev3rs-rs .dev3rs-rs__meta { margin: 0; font-size: .85em; opacity: .75; }
+.dev3rs-rs .dev3rs-rs__text { margin: 0 0 1em; }
+.dev3rs-rs__sentiment { margin: 0 0 1.1em; }
+.dev3rs-rs__bar { display: flex; height: 10px; border-radius: 999px; overflow: hidden; background: var(--dev3rs-border); }
+.dev3rs-rs__seg { display: block; height: 100%; }
+.dev3rs-rs__seg--positive, .dev3rs-rs__dot--positive { background: var(--dev3rs-pos); }
+.dev3rs-rs__seg--neutral, .dev3rs-rs__dot--neutral { background: var(--dev3rs-neu); }
+.dev3rs-rs__seg--negative, .dev3rs-rs__dot--negative { background: var(--dev3rs-neg); }
+.dev3rs-rs__dot--mixed { background: linear-gradient(90deg, var(--dev3rs-pos) 50%, var(--dev3rs-neg) 50%); }
+.dev3rs-rs .dev3rs-rs__legend { display: flex; flex-wrap: wrap; gap: .3em 1.1em; margin-top: .45em !important; font-size: .85em; }
+.dev3rs-rs__legend li { display: inline-flex; align-items: center; gap: .4em; }
+.dev3rs-rs__dot { display: inline-block; width: .6em; height: .6em; border-radius: 50%; flex: none; }
+.dev3rs-rs__lists { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1em 1.5em; margin-bottom: 1.1em; }
+.dev3rs-rs .dev3rs-rs__subtitle { margin: 0 0 .45em !important; padding: 0; font-size: .95em !important; line-height: 1.4 !important; font-weight: 700; color: inherit; text-transform: none; letter-spacing: 0; border: 0; }
+.dev3rs-rs__col li { display: flex; gap: .5em; align-items: flex-start; padding: .2em 0; }
+.dev3rs-rs__icon { display: inline-flex; flex: none; margin-top: .2em; }
+.dev3rs-rs__col--pros .dev3rs-rs__icon { color: var(--dev3rs-pos); }
+.dev3rs-rs__col--cons .dev3rs-rs__icon { color: var(--dev3rs-neg); }
+.dev3rs-rs__scores { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: .8em 1.5em; margin-bottom: 1.1em !important; }
+.dev3rs-rs .dev3rs-rs__score dt { font-size: .85em; font-weight: 600; margin: 0 0 .3em; }
+.dev3rs-rs__score dd { display: flex; align-items: center; gap: .6em; }
+.dev3rs-rs__meter { position: relative; flex: 1; height: 8px; border-radius: 999px; background: var(--dev3rs-border); overflow: hidden; }
+.dev3rs-rs__meter > span { position: absolute; inset: 0 auto 0 0; background: var(--dev3rs-accent); border-radius: 999px; }
+.dev3rs-rs__num { font-weight: 700; font-size: .95em; white-space: nowrap; }
+.dev3rs-rs__of { font-weight: 400; opacity: .65; }
+.dev3rs-rs__score--fit dd { flex-direction: column; align-items: stretch; gap: .2em; }
+.dev3rs-rs__fit { position: relative; display: block; height: 30px; }
+.dev3rs-rs__fit-track { position: absolute; left: 0; right: 0; top: 4px; height: 6px; border-radius: 999px; background: var(--dev3rs-border); }
+.dev3rs-rs__fit-mark { position: absolute; top: 0; width: 14px; height: 14px; margin-left: -7px; border-radius: 50%; background: var(--dev3rs-accent); border: 2px solid var(--dev3rs-bg); box-shadow: 0 0 0 1px var(--dev3rs-accent); }
+.dev3rs-rs__fit-ends { position: absolute; left: 0; right: 0; bottom: 0; display: flex; justify-content: space-between; font-size: .72em; opacity: .7; }
+.dev3rs-rs__num--fit { font-size: .9em; }
+.dev3rs-rs__chips { display: flex; flex-wrap: wrap; gap: .4em; }
+.dev3rs-rs .dev3rs-rs__chip { display: inline-flex; align-items: center; gap: .4em; padding: .2em .7em; border: 1px solid var(--dev3rs-border) !important; border-radius: 999px; font-size: .85em; }
+.dev3rs-rs__themes { margin-bottom: 1em; }
+.dev3rs-rs .dev3rs-rs__note { margin: .4em 0 0; font-size: .78em; opacity: .65; }
+.dev3rs-rs__sr { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+/* Compact layout */
+.dev3rs-rs--compact { padding: .9em 1em; font-size: 14px; }
+.dev3rs-rs--compact .dev3rs-rs__head { margin-bottom: .35em; }
+.dev3rs-rs--compact .dev3rs-rs__head .dev3rs-rs__title.dev3rs-rs__title.dev3rs-rs__title { font-size: 1em !important; }
+.dev3rs-rs--compact .dev3rs-rs__text { margin-bottom: .7em; }
+.dev3rs-rs--compact .dev3rs-rs__bar { height: 6px; }
+.dev3rs-rs--compact .dev3rs-rs__lists { gap: .5em 1em; margin-bottom: .7em; }
+.dev3rs-rs--compact .dev3rs-rs__col li { padding: .05em 0; }
+.dev3rs-rs--compact .dev3rs-rs__scores { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: .5em 1em; margin-bottom: .7em !important; }
+.dev3rs-rs--compact .dev3rs-rs__themes .dev3rs-rs__subtitle { display: none; }
+.dev3rs-rs--compact .dev3rs-rs__chip { font-size: .8em; padding: .1em .55em; }
+.woocommerce-tabs .dev3rs-rs, .wc-tabs-wrapper .dev3rs-rs { margin-top: .25em; }
+.summary .dev3rs-rs, .wp-block-woocommerce-add-to-cart-form + .dev3rs-rs { margin-top: 1em; }
+@media (prefers-reduced-motion: no-preference) { .dev3rs-rs__meter > span, .dev3rs-rs__seg { transition: width .4s ease; } }

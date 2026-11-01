@@ -1,0 +1,1429 @@
+# Copyright (C) 2026 DEV3 Technologies
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: DEV3 AI Review Summarizer & Sentiment Analyzer for WooCommerce 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/dev3-ai-review-summarizer-for-woocommerce\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-23T17:39:19+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: dev3-ai-review-summarizer-for-woocommerce\n"
+
+#. Plugin Name of the plugin
+#: dev3-ai-review-summarizer-for-woocommerce.php
+msgid "DEV3 AI Review Summarizer & Sentiment Analyzer for WooCommerce"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: dev3-ai-review-summarizer-for-woocommerce.php
+msgid "https://dev3.tech/item/dev3-ai-review-summarizer-for-woocommerce"
+msgstr ""
+
+#. Description of the plugin
+#: dev3-ai-review-summarizer-for-woocommerce.php
+msgid "AI review summaries with pros & cons, sentiment and quality, value and sizing scores on WooCommerce product pages."
+msgstr ""
+
+#. Author of the plugin
+#: dev3-ai-review-summarizer-for-woocommerce.php
+msgid "DEV3 Technologies"
+msgstr ""
+
+#. Author URI of the plugin
+#: dev3-ai-review-summarizer-for-woocommerce.php
+msgid "https://dev3.tech"
+msgstr ""
+
+#: includes/Admin/Admin_Page.php:42
+#: build/admin.js:7
+msgid "DEV3 AI Review Summaries"
+msgstr ""
+
+#: includes/Admin/Admin_Page.php:77
+msgid "Settings"
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:49
+msgid "No Gemini API key is configured."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:50
+msgid "Open the plugin settings → API Config and paste a key from Google AI Studio."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:66
+msgid "The AI service took too long to respond."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:67
+msgid "Try again, shorten the prompt, lower Max Output Tokens, or switch to the faster model."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:75
+msgid "Your server could not reach the AI service (Google Gemini API)."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:76
+msgid "Check the server's internet connection or firewall (outbound HTTPS to generativelanguage.googleapis.com)."
+msgstr ""
+
+#. translators: %s: transport error message.
+#: includes/Core3/Api/Api_Error.php:84
+#, php-format
+msgid "Request to the AI service failed: %s"
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:85
+#: includes/Core3/Api/Gemini_Client.php:180
+#: includes/Summary/Summarizer.php:110
+msgid "Try again in a moment."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:114
+msgid "The Gemini API key is not valid."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:115
+msgid "Create a new key in Google AI Studio and paste it in API Config."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:123
+msgid "Your Gemini quota is exhausted."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:123
+msgid "AI rate limit reached."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:125
+msgid "Wait for the quota to reset, enable billing on your Google Cloud project, or switch to a model with remaining quota."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:126
+msgid "Wait a few seconds and try again."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:134
+msgid "This API key is not allowed to use Gemini."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:135
+msgid "Enable the Generative Language API for the key's project, and check any key restrictions (HTTP referrer / IP)."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:142
+msgid "The selected Gemini model is not available."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:143
+msgid "Pick another model in API Config — click \"Refresh models\" to load the ones your key can use."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:150
+msgid "The AI service is not available in your server's region."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:151
+msgid "Host the site in a supported region or use a key from a supported project."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:158
+msgid "The AI service is temporarily unavailable."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:159
+msgid "This is on Google's side. Try again shortly or switch models."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:166
+msgid "The AI service rejected the request."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:167
+msgid "Adjust the prompt or settings and try again."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:179
+msgid "The AI returned malformed data."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:229
+msgid "The AI blocked this request for safety reasons."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:230
+#: includes/Core3/Api/Gemini_Client.php:259
+msgid "Rephrase the prompt and try again."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:258
+msgid "The AI stopped because the response was flagged."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:266
+msgid "The AI ran out of output tokens before writing an answer."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:267
+msgid "Increase Max Output Tokens in API Config, or set Reasoning to \"Low\"."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:274
+msgid "The AI returned an empty response."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:275
+msgid "Try again or rephrase the prompt."
+msgstr ""
+
+#: includes/Core3/Data/Usage_Repository.php:81
+msgid "Deleted user"
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:72
+msgid "Your session has expired. Reload the editor and try again."
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:75
+msgid "You do not have permission to do that."
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:94
+msgid "Cross-origin requests are not allowed."
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:104
+msgid "Too many requests. Please wait a moment."
+msgstr ""
+
+#. translators: %s: number of reviews
+#: includes/Frontend/Renderer.php:117
+#, php-format
+msgid "Based on %s customer review"
+msgid_plural "Based on %s customer reviews"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/Frontend/Renderer.php:140
+msgid "Generated by AI from customer reviews. Individual experiences may vary."
+msgstr ""
+
+#: includes/Frontend/Renderer.php:157
+#: build/admin.js:1
+#: build/admin.js:3
+#: build/admin.js:6
+msgid "Positive"
+msgstr ""
+
+#: includes/Frontend/Renderer.php:158
+#: build/admin.js:1
+#: build/admin.js:3
+#: build/admin.js:6
+msgid "Neutral"
+msgstr ""
+
+#: includes/Frontend/Renderer.php:159
+#: build/admin.js:1
+#: build/admin.js:3
+#: build/admin.js:6
+msgid "Negative"
+msgstr ""
+
+#. translators: 1: positive %, 2: neutral %, 3: negative %
+#: includes/Frontend/Renderer.php:162
+#, php-format
+msgid "Review sentiment: %1$d%% positive, %2$d%% neutral, %3$d%% negative"
+msgstr ""
+
+#: includes/Frontend/Renderer.php:207
+msgid "Quality"
+msgstr ""
+
+#: includes/Frontend/Renderer.php:208
+msgid "Value for money"
+msgstr ""
+
+#. translators: %s: score out of 5
+#: includes/Frontend/Renderer.php:216
+#, php-format
+msgid "%s out of 5"
+msgstr ""
+
+#: includes/Frontend/Renderer.php:224
+msgid "Fit"
+msgstr ""
+
+#: includes/Frontend/Renderer.php:224
+msgid "Small"
+msgstr ""
+
+#: includes/Frontend/Renderer.php:224
+#: includes/Frontend/Renderer.php:238
+#: build/admin.js:3
+msgid "True to size"
+msgstr ""
+
+#: includes/Frontend/Renderer.php:224
+msgid "Large"
+msgstr ""
+
+#: includes/Frontend/Renderer.php:236
+#: build/admin.js:3
+msgid "Runs small"
+msgstr ""
+
+#: includes/Frontend/Renderer.php:237
+#: build/admin.js:3
+msgid "Slightly small"
+msgstr ""
+
+#: includes/Frontend/Renderer.php:239
+#: build/admin.js:3
+msgid "Slightly large"
+msgstr ""
+
+#: includes/Frontend/Renderer.php:240
+#: build/admin.js:3
+msgid "Runs large"
+msgstr ""
+
+#: includes/Frontend/Renderer.php:253
+msgid "positive"
+msgstr ""
+
+#: includes/Frontend/Renderer.php:254
+msgid "neutral"
+msgstr ""
+
+#: includes/Frontend/Renderer.php:255
+msgid "negative"
+msgstr ""
+
+#: includes/Frontend/Renderer.php:256
+msgid "mixed"
+msgstr ""
+
+#: includes/Frontend/Renderer.php:258
+msgid "Mentioned in reviews"
+msgstr ""
+
+#: includes/Frontend/Renderer.php:281
+msgid "Shoppers praise the soft, breathable fabric and say the colours stay vivid after many washes. Most find it great value, though several mention that it runs about half a size small."
+msgstr ""
+
+#: includes/Frontend/Renderer.php:283
+msgid "Soft, breathable fabric"
+msgstr ""
+
+#: includes/Frontend/Renderer.php:284
+msgid "Colours hold up after washing"
+msgstr ""
+
+#: includes/Frontend/Renderer.php:285
+msgid "Fast delivery and neat packaging"
+msgstr ""
+
+#: includes/Frontend/Renderer.php:288
+msgid "Runs about half a size small"
+msgstr ""
+
+#: includes/Frontend/Renderer.php:289
+msgid "Sleeves are a little long"
+msgstr ""
+
+#: includes/Frontend/Renderer.php:303
+msgid "fabric"
+msgstr ""
+
+#: includes/Frontend/Renderer.php:308
+msgid "fit"
+msgstr ""
+
+#: includes/Frontend/Renderer.php:313
+msgid "price"
+msgstr ""
+
+#: includes/Frontend/Renderer.php:318
+msgid "sleeves"
+msgstr ""
+
+#: includes/Jobs/Bulk_Job.php:64
+msgid "Unknown bulk action."
+msgstr ""
+
+#: includes/Jobs/Bulk_Job.php:68
+msgid "A bulk job is already running."
+msgstr ""
+
+#: includes/Jobs/Bulk_Job.php:68
+msgid "Wait for it to finish or cancel it."
+msgstr ""
+
+#: includes/Plugin.php:136
+msgid "needs WooCommerce. Install and activate WooCommerce to summarise product reviews."
+msgstr ""
+
+#: includes/Rest/Summary_Controller.php:322
+msgid "This summary is locked."
+msgstr ""
+
+#: includes/Rest/Summary_Controller.php:323
+msgid "Unlock it (or confirm \"Regenerate and unlock\") to replace it with a new AI summary."
+msgstr ""
+
+#: includes/Rest/Summary_Controller.php:382
+msgid "No summary for this product."
+msgstr ""
+
+#: includes/Settings.php:173
+#: build/admin.js:6
+msgid "AI review summary"
+msgstr ""
+
+#: includes/Settings.php:174
+#: build/admin.js:6
+msgid "What buyers love"
+msgstr ""
+
+#: includes/Settings.php:175
+#: build/admin.js:6
+msgid "Things to consider"
+msgstr ""
+
+#: includes/Settings.php:176
+#: build/admin.js:6
+msgid "Review summary"
+msgstr ""
+
+#: includes/Summary/Summarizer.php:47
+#: includes/Summary/Summarizer.php:151
+msgid "Product not found."
+msgstr ""
+
+#. translators: 1: approved reviews, 2: minimum
+#: includes/Summary/Summarizer.php:60
+#, php-format
+msgid "This product has %1$d approved reviews; at least %2$d are needed for a summary."
+msgstr ""
+
+#: includes/Summary/Summarizer.php:61
+msgid "Lower the minimum in General settings or wait for more reviews."
+msgstr ""
+
+#: includes/Summary/Summarizer.php:74
+msgid "The approved reviews have no text to summarise."
+msgstr ""
+
+#: includes/Summary/Summarizer.php:110
+msgid "The AI returned an empty summary."
+msgstr ""
+
+#: includes/Summary/Summarizer.php:158
+msgid "Add a summary paragraph or at least one pro or con."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Request cancelled."
+msgstr ""
+
+#: build/admin.js:1
+msgid "You appear to be offline."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Check your internet connection, then try again."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Could not reach your WordPress site."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Check your connection or reload the editor."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Your session has expired."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save your work and reload the page."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Something went wrong."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Custom model ID…"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Choose from list"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Google Gemini API key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Create a free key in Google AI Studio, paste it here and click “Validate & save”. The key is encrypted in your database and never sent to the browser."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Get an API key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "The key is defined by the DEV3RS_GEMINI_API_KEY constant in wp-config.php."
+msgstr ""
+
+#: build/admin.js:1
+msgid "API key"
+msgstr ""
+
+#. translators: %d: number of models
+#: build/admin.js:1
+#, js-format
+msgid "Connected — %d models available to this key."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Validate & save"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Remove key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "OpenSSL is not available on this server, so the key is only obfuscated. Consider defining DEV3RS_GEMINI_API_KEY in wp-config.php instead."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Models"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Fast is used for most editing tasks; Pro for complex, long-form or structured work."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Refresh models"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Fast model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recommended: gemini-2.5-flash"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Pro model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recommended: gemini-2.5-pro"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Generation parameters"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Temperature"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Lower = focused and consistent, higher = more creative."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Max output tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Upper limit per answer."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Reasoning"
+msgstr ""
+
+#: build/admin.js:1
+msgid "“Low” keeps editor generations fast and cheap; “Auto” lets the model think longer."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Low (fast)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Auto (model decides)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save engine settings"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Usage could not be loaded."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Token counts come from the AI provider’s usage metadata. Check exact billing in Google AI Studio / Cloud Console."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Period"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Last 7 days"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Last 30 days"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Last 90 days"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Total tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Input tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Output tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Avg. response time"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Errors"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests per day"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests per day chart"
+msgstr ""
+
+#. translators: 1: date, 2: requests, 3: tokens
+#: build/admin.js:1
+#, js-format
+msgid "%1$s — %2$s requests, %3$s tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No requests in this period yet."
+msgstr ""
+
+#: build/admin.js:1
+msgid "By task"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Task"
+msgstr ""
+
+#: build/admin.js:1
+msgid "By model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "By user"
+msgstr ""
+
+#: build/admin.js:1
+msgid "User"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recent requests"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Time"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Where"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Time (s)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Status"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Newer"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Older"
+msgstr ""
+
+#: build/admin.js:1
+msgid "just now"
+msgstr ""
+
+#. translators: %d: days
+#: build/admin.js:1
+#, js-format
+msgid "%d day ago"
+msgid_plural "%d days ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: hours
+#: build/admin.js:1
+#, js-format
+msgid "%d hour ago"
+msgid_plural "%d hours ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: minutes
+#: build/admin.js:1
+#, js-format
+msgid "%d minute ago"
+msgid_plural "%d minutes ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin.js:1
+#: build/admin.js:6
+msgid "Keywords & themes"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Term"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Sentiment"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Mixed"
+msgstr ""
+
+#. translators: %s: keyword
+#: build/admin.js:1
+#, js-format
+msgid "Remove “%s”"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Add keyword"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Summary saved and locked."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Summary saved."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Summary locked."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Summary unlocked. It will update automatically when reviews change."
+msgstr ""
+
+#. translators: %s: product
+#: build/admin.js:1
+#, js-format
+msgid "AI review summary: %s"
+msgstr ""
+
+#: build/admin.js:1
+#: build/admin.js:6
+msgid "Locked"
+msgstr ""
+
+#. translators: 1: time ago, 2: review count, 3: model
+#: build/admin.js:2
+#, js-format
+msgid "Generated %1$s from %2$d reviews · %3$s"
+msgstr ""
+
+#. translators: %s: time ago
+#: build/admin.js:2
+#, js-format
+msgid "edited %s"
+msgstr ""
+
+#. translators: %d: count
+#: build/admin.js:3
+#, js-format
+msgid "The AI ignored %d review that looked like instructions to the AI, spam or off-topic text. You may want to moderate it:"
+msgid_plural "The AI ignored %d reviews that looked like instructions to the AI, spam or off-topic text. You may want to moderate them:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/admin.js:3
+msgid "Preview"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Edit"
+msgstr ""
+
+#: build/admin.js:3
+#: build/admin.js:6
+msgid "Summary paragraph"
+msgstr ""
+
+#: build/admin.js:3
+msgid "What buyers love (one per line)"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Things to consider (one per line)"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Sentiment (%)"
+msgstr ""
+
+#. translators: 1-3: percentages
+#: build/admin.js:3
+#, js-format
+msgid "saved as %1$d / %2$d / %3$d"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Quality (1–5, empty = hide)"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Value (1–5, empty = hide)"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Sizing"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Not applicable"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Lock this summary (never overwrite it automatically)"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Save & lock"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Save"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Unlock"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Lock"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Delete this summary? It disappears from the product page until a new one is generated."
+msgstr ""
+
+#: build/admin.js:3
+msgid "Summary deleted."
+msgstr ""
+
+#: build/admin.js:3
+msgid "Delete summary"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Close"
+msgstr ""
+
+#. translators: %s: average rating
+#: build/admin.js:3
+#, js-format
+msgid "Average rating %s out of 5"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Bulk generate"
+msgstr ""
+
+#: build/admin.js:3
+msgid "Runs in the background and continues while this screen is open. Locked summaries are never overwritten."
+msgstr ""
+
+#. translators: %d: products
+#: build/admin.js:3
+#, js-format
+msgid "Generate missing (%d)"
+msgstr ""
+
+#. translators: %d: products
+#: build/admin.js:3
+#, js-format
+msgid "Refresh stale (%d)"
+msgstr ""
+
+#. translators: 1: done, 2: total, 3: generated, 4: skipped, 5: failed
+#: build/admin.js:4
+#, js-format
+msgid "%1$d of %2$d processed · %3$d generated · %4$d skipped · %5$d failed"
+msgstr ""
+
+#. translators: %s: product name
+#: build/admin.js:4
+#, js-format
+msgid "Now: %s"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Cancelled"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Done"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Stopped"
+msgstr ""
+
+#: build/admin.js:4
+msgid "Cancel"
+msgstr ""
+
+#. translators: %d: errors
+#: build/admin.js:4
+#, js-format
+msgid "%d error"
+msgid_plural "%d errors"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: product name
+#: build/admin.js:6
+#, js-format
+msgid "New AI summary generated for “%s”."
+msgstr ""
+
+#: build/admin.js:6
+msgid "WooCommerce is not active. Activate it to summarise product reviews."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Products with reviews"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Fresh summaries"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Stale (new reviews)"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Missing (eligible)"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Filter by status"
+msgstr ""
+
+#: build/admin.js:6
+msgid "All"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Missing"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Fresh"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Stale"
+msgstr ""
+
+#. translators: %d: products
+#: build/admin.js:6
+#, js-format
+msgid "Regenerate selected (%d)"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Search products"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Select all"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Product"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Reviews"
+msgstr ""
+
+#: build/admin.js:6
+#: build/block.js:1
+msgid "Summary"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Updated"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Actions"
+msgstr ""
+
+#: build/admin.js:6
+msgid "No products match. Products appear here once they have approved reviews."
+msgstr ""
+
+#: build/admin.js:6
+msgid "No summary"
+msgstr ""
+
+#. translators: %s: product
+#: build/admin.js:6
+#, js-format
+msgid "Select %s"
+msgstr ""
+
+#: build/admin.js:6
+msgid "View product"
+msgstr ""
+
+#. translators: %d: minimum reviews
+#: build/admin.js:6
+#, js-format
+msgid "Needs %d to summarise"
+msgstr ""
+
+#: build/admin.js:6
+msgid "New reviews since locking"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Update queued"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Edited by a moderator"
+msgstr ""
+
+#: build/admin.js:6
+msgid "This summary is locked. Regenerate it and remove the lock?"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Generating…"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Regenerate"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Generate with DEV3 AI"
+msgstr ""
+
+#: build/admin.js:6
+msgid "View / Edit"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Previous"
+msgstr ""
+
+#. translators: 1: page, 2: pages
+#: build/admin.js:6
+#, js-format
+msgid "Page %1$d of %2$d"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Next"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Regenerate and unlock"
+msgstr ""
+
+#. translators: %s: product
+#: build/admin.js:6
+#, js-format
+msgid "The summary for “%s” is locked by a moderator. Replace it with a new AI summary and remove the lock?"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Placement"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Where the summary appears on single product pages. Works with classic and block themes."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Position"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Above the reviews list"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Below the Add to cart button"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Own “Review summary” tab"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Off (shortcode / block only)"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Anywhere else: shortcode"
+msgstr ""
+
+#: build/admin.js:6
+msgid "or the “AI Review Summary” block."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Layout & content"
+msgstr ""
+
+#: build/admin.js:6
+#: build/block.js:1
+msgid "Layout"
+msgstr ""
+
+#: build/admin.js:6
+#: build/block.js:1
+msgid "Card"
+msgstr ""
+
+#: build/admin.js:6
+#: build/block.js:1
+msgid "Compact"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Pros & cons"
+msgstr ""
+
+#: build/admin.js:6
+#: build/block.js:1
+msgid "Sentiment bar"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Quality, value & fit scores"
+msgstr ""
+
+#: build/admin.js:6
+msgid "“Based on N reviews”"
+msgstr ""
+
+#: build/admin.js:6
+msgid "“Generated by AI” note"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Heading"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Tab title"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Pros title"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Cons title"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Colours"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Accent"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Background"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Text"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Border"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Corner radius (px)"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Save display settings"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Discard changes"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Live preview"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Preview with"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Sample summary"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Your theme’s fonts apply on the storefront."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Review summaries"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Only approved product reviews are used. Reviewer names and email addresses are never sent to the AI."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Minimum approved reviews"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Products with fewer reviews get no summary (and the widget stays hidden)."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Reviews analysed per product"
+msgstr ""
+
+#: build/admin.js:6
+msgid "The most recent reviews are sent. More reviews give a broader picture but use more tokens."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Summary language"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Store language (Settings → General)"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Language most reviews are written in"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Automation"
+msgstr ""
+
+#: build/admin.js:6
+msgid "Update summaries automatically when reviews change"
+msgstr ""
+
+#: build/admin.js:6
+msgid "New, approved, edited or removed reviews queue a background update. Locked summaries are skipped."
+msgstr ""
+
+#: build/admin.js:6
+msgid "Wait before updating (minutes)"
+msgstr ""
+
+#. translators: %d: minutes
+#: build/admin.js:7
+#, js-format
+msgid "Reviews arriving within %d minutes are summarised together in one request."
+msgstr ""
+
+#: build/admin.js:7
+msgid "Nightly refresh of stale and missing summaries"
+msgstr ""
+
+#: build/admin.js:7
+msgid "Data"
+msgstr ""
+
+#: build/admin.js:7
+msgid "Keep usage logs"
+msgstr ""
+
+#: build/admin.js:7
+msgid "Delete all plugin data when uninstalling"
+msgstr ""
+
+#: build/admin.js:7
+msgid "Removes settings, usage logs and every stored summary."
+msgstr ""
+
+#: build/admin.js:7
+msgid "Save settings"
+msgstr ""
+
+#: build/admin.js:7
+msgid "Products"
+msgstr ""
+
+#: build/admin.js:7
+msgid "Display"
+msgstr ""
+
+#: build/admin.js:7
+msgid "General Settings"
+msgstr ""
+
+#: build/admin.js:7
+msgid "API Config"
+msgstr ""
+
+#: build/admin.js:7
+msgid "Usage Logs"
+msgstr ""
+
+#: build/admin.js:7
+msgid "Settings saved."
+msgstr ""
+
+#: build/admin.js:7
+msgid "Add your Google Gemini API key under API Config to start generating summaries."
+msgstr ""
+
+#: build/admin.js:7
+msgid "Open API Config"
+msgstr ""
+
+#: build/block.js:1
+msgid "Use Display settings"
+msgstr ""
+
+#: build/block.js:1
+msgid "Show"
+msgstr ""
+
+#: build/block.js:1
+msgid "Hide"
+msgstr ""
+
+#: build/block.js:1
+msgid "AI Review Summary"
+msgstr ""
+
+#: build/block.js:1
+msgid "The AI summary of this product’s reviews appears here once one has been generated. Pick a product ID in the sidebar, or place the block in a single product template."
+msgstr ""
+
+#: build/block.js:1
+msgid "Product ID"
+msgstr ""
+
+#: build/block.js:1
+msgid "Leave empty to use the current product."
+msgstr ""
+
+#: build/block.js:1
+msgid "Scores"
+msgstr ""
+
+#: build/block.js:1
+msgid "Keywords"
+msgstr ""
+
+#: assets/blocks/review-summary/block.json
+msgctxt "block title"
+msgid "AI Review Summary"
+msgstr ""
+
+#: assets/blocks/review-summary/block.json
+msgctxt "block description"
+msgid "Pros & cons, sentiment and scores summarised by AI from a product's reviews."
+msgstr ""
+
+#: assets/blocks/review-summary/block.json
+msgctxt "block keyword"
+msgid "reviews"
+msgstr ""
+
+#: assets/blocks/review-summary/block.json
+msgctxt "block keyword"
+msgid "summary"
+msgstr ""
+
+#: assets/blocks/review-summary/block.json
+msgctxt "block keyword"
+msgid "sentiment"
+msgstr ""
+
+#: assets/blocks/review-summary/block.json
+msgctxt "block keyword"
+msgid "pros"
+msgstr ""
+
+#: assets/blocks/review-summary/block.json
+msgctxt "block keyword"
+msgid "cons"
+msgstr ""

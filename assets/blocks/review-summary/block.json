@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "dev3rs/review-summary",
+	"version": "1.0.0",
+	"title": "AI Review Summary",
+	"category": "woocommerce",
+	"icon": "star-half",
+	"description": "Pros & cons, sentiment and scores summarised by AI from a product's reviews.",
+	"keywords": [ "reviews", "summary", "sentiment", "pros", "cons" ],
+	"textdomain": "dev3-ai-review-summarizer-for-woocommerce",
+	"usesContext": [ "postId", "postType" ],
+	"attributes": {
+		"productId": { "type": "number", "default": 0 },
+		"layout": { "type": "string", "enum": [ "", "card", "compact" ], "default": "" },
+		"showScores": { "type": "string", "enum": [ "", "show", "hide" ], "default": "" },
+		"showSentiment": { "type": "string", "enum": [ "", "show", "hide" ], "default": "" },
+		"showKeywords": { "type": "string", "enum": [ "", "show", "hide" ], "default": "" }
+	},
+	"supports": { "html": false, "align": [ "wide", "full" ], "spacing": { "margin": true } },
+	"editorScript": "dev3-ai-review-summarizer-for-woocommerce-block",
+	"style": "dev3rs-summary"
+}
